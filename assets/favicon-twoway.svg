@@ -1,0 +1,37 @@
+<svg width="512" height="512"
+	xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1">
+
+	<!-- Live area -->
+	<rect
+		opacity="0"
+
+		id="live-area"
+		x="42.6667"
+		y="42.6667"
+		width="426.6667"
+		height="426.6667"
+		fill="none"
+		stroke="#1976D2"
+		stroke-width="2"
+	/>
+
+	<!-- Triangles -->
+	<g>
+		<path
+			id="triangle-top"
+			d="M 444.056629 214.370849 L 267.893291 54.444371 Q 286.018866 160.611520 146.944219 214.835524 L 444.056629 214.370849 Z"
+			fill="#1976D2"
+			stroke="#1976D2"
+			stroke-width="6"
+			stroke-linejoin="round"
+		/>
+		<path
+			id="triangle-bottom"
+			d="M 64.103884 291.691277 L 242.431626 453.923261 Q 223.468510 345.939928 363.870020 292.205245 L 64.103884 291.691277 Z"
+			fill="#1976D2"
+			stroke="#1976D2"
+			stroke-width="6"
+			stroke-linejoin="round"
+		/>
+	</g>
+</svg>
