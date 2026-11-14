@@ -1,4 +1,4 @@
-/* TwoWay brand colors. Generated from src/colors.ts by scripts/build-tokens.mjs: don't edit, run `npm run build`. */
+/* Generated from DESIGN.md by scripts/generate.mjs. Don't edit: change DESIGN.md and run `npm run build`. */
 /* Shades go from 0 (lightest) to 9 (darkest). The unnumbered variable is the brand hex, shade 6. */
 :root {
 	/* primary (Mantine: twoway) */

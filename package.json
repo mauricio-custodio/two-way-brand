@@ -15,16 +15,17 @@
 		},
 		"./tokens.css": "./dist/tokens.css",
 		"./assets/*": "./assets/*",
+		"./DESIGN.md": "./DESIGN.md",
 		"./package.json": "./package.json"
 	},
 	"files": [
 		"dist",
 		"assets",
-		"BRAND.md"
+		"DESIGN.md"
 	],
 	"scripts": {
-		"build": "rm -rf dist && tsc && node scripts/build-tokens.mjs",
-		"check": "npm run build && test -z \"$(git status --porcelain -- dist)\" || (echo 'dist/ is out of date: commit the rebuilt files.' && exit 1)"
+		"build": "rm -rf dist && node scripts/generate.mjs && tsc",
+		"check": "npm run build && test -z \"$(git status --porcelain -- dist src/palette.generated.ts)\" || (echo 'Generated files are out of date: commit the rebuilt dist/ and src/palette.generated.ts.' && exit 1)"
 	},
 	"peerDependencies": {
 		"@mantine/core": "^7.0.0 || ^8.0.0 || ^9.0.0",
@@ -36,6 +37,7 @@
 		}
 	},
 	"devDependencies": {
+		"@google/design.md": "0.4.0",
 		"@mantine/core": "^9.8.0",
 		"@types/react": "^19.3.0",
 		"typescript": "^5.9.3"

@@ -1,18 +1,20 @@
 # two-way-brand
 
-TwoWay's colors, logo files and `BrandLogo` component. How to use them: [BRAND.md](BRAND.md).
+TwoWay's colors, logo files and `BrandLogo` component. [DESIGN.md](DESIGN.md) holds the brand's values and rules, in Google's [DESIGN.md format](https://github.com/google-labs-code/design.md) so agents can read them. The code is generated from it.
 
 The repo is public so Cloudflare builds can install it without a token. There's no license: all rights reserved.
 
 ## Install
 
 ```bash
-npm i github:mauricio-custodio/two-way-brand#v0.1.1
+npm i github:mauricio-custodio/two-way-brand#v0.2.0
 ```
 
 Peer dependencies: React 18 or 19, and optionally `@mantine/core` 7 to 9.
 
 ## Use
+
+Agents: point them at `node_modules/two-way-brand/DESIGN.md`, e.g. with a line in the project's AGENTS.md.
 
 Mantine theme. Put your own overrides after `twowayTheme`:
 
@@ -53,7 +55,9 @@ Favicon, in `index.html`. Vite serves it in dev and bundles it on build:
 
 ## Develop and release
 
-Edit `src/`, then run `npm run build` to regenerate `dist/` (JS, types and `tokens.css`). `dist/` is committed so projects can install from git with no build step. The alternative, a `prepare` script, would install TypeScript and Mantine in every project's build. `npm run check` fails if `dist/` is stale.
+To change a color or a rule, edit DESIGN.md and run `npm run build`. The build lints DESIGN.md and fails on any error or warning, contrast included, then regenerates `src/palette.generated.ts` and `dist/` (JS, types and `tokens.css`). The linter's "never referenced" warnings are the exception: most shades aren't used by a component, so the build ignores them. Running `npx @google/design.md lint DESIGN.md` by hand shows them, and they're expected.
+
+`dist/` is committed so projects can install from git with no build step. The alternative, a `prepare` script, would install TypeScript and Mantine in every project's build. `npm run check` fails if the generated files are stale.
 
 To release, commit everything, then:
 
