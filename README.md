@@ -55,7 +55,7 @@ Favicon, in `index.html`. Vite serves it in dev and bundles it on build:
 
 ## Develop and release
 
-To change a color or a rule, edit DESIGN.md and run `npm run build`. The build lints DESIGN.md and fails on any error or warning, contrast included, then regenerates `src/palette.generated.ts` and `dist/` (JS, types and `tokens.css`). The linter's "never referenced" warnings are the exception: most shades aren't used by a component, so the build ignores them. Running `npx @google/design.md lint DESIGN.md` by hand shows them, and they're expected.
+To change a color or a rule, edit DESIGN.md and run `npm run build`. The build lints DESIGN.md and fails on any error or warning, contrast included. Then it generates Mantine's 10 shades per color around the colors DESIGN.md defines, and writes `src/palette.generated.ts` and `dist/` (JS, types and `tokens.css`).
 
 `dist/` is committed so projects can install from git with no build step. The alternative, a `prepare` script, would install TypeScript and Mantine in every project's build. `npm run check` fails if the generated files are stale.
 

@@ -6,10 +6,6 @@ export declare const twowayTheme: {
     colors: {
         twoway: import("@mantine/core").MantineColorsTuple;
         secondary: import("@mantine/core").MantineColorsTuple;
-        tertiary: import("@mantine/core").MantineColorsTuple;
-        success: import("@mantine/core").MantineColorsTuple;
-        danger: import("@mantine/core").MantineColorsTuple;
-        warning: import("@mantine/core").MantineColorsTuple;
     };
     primaryColor: "twoway";
 };
