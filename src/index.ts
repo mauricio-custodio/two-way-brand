@@ -1,13 +1,10 @@
 export {
 	BRAND_SHADE,
 	brandHex,
-	danger,
 	secondary,
-	success,
-	tertiary,
+	STRONG_SHADE,
 	twoway,
 	twowayColors,
-	warning,
 	type TwowayColor,
 } from "./colors.js";
 export { twowayTheme } from "./theme.js";
