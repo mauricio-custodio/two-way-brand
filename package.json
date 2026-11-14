@@ -1,6 +1,6 @@
 {
 	"name": "two-way-brand",
-	"version": "0.1.1",
+	"version": "0.2.0",
 	"description": "TwoWay brand source of truth: colors as Mantine tuples and CSS variables, logo files, and a BrandLogo React component.",
 	"private": true,
 	"repository": "github:mauricio-custodio/two-way-brand",
